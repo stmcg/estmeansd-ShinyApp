@@ -5,6 +5,7 @@ account: smcgrath
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 674599
-bundleId: 3499831
+bundleId: 6059099
 url: https://smcgrath.shinyapps.io/estmeansd/
-when: 1597112200.0715
+when: 1656621987.50741
+lastSyncTime: 1656621987.50743

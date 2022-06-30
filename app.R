@@ -11,7 +11,7 @@ ui <- fluidPage(
     tags$li("S2: median, first and third quartiles, and sample size"),
     tags$li("S3: median, minimum and maximum values, first and third quartiles, and sample size")
   ),
-  HTML(paste0("The standard error (SE) of the mean is estimated by the parametric bootstrap approach of McGrath et al. (In preparation).")),
+  HTML(paste0("The standard error (SE) of the mean is estimated by the parametric bootstrap approach of ", tags$a(href="https://arxiv.org/abs/2206.14386", "McGrath et al. (2022)"), ".")),
   br(), br(), 
   
   HTML(paste0("These methods are also implemented in the R package ", tags$a(href="https://CRAN.R-project.org/package=estmeansd", "estmeansd"), ", which provides detailed documentation and greater flexibility for applying these methods.")),
@@ -42,14 +42,15 @@ ui <- fluidPage(
     )
   ),
   hr(),
-  tags$h4("Reference:"),
+  tags$h4("References:"),
   print("McGrath S., Zhao X., Steele R., Thombs B.D., Benedetti A., and the DEPRESsion Screening Data (DEPRESSD) Collaboration. (2020). Estimating the sample mean and standard deviation from commonly reported quantiles in meta-analysis. Statistical Methods in Medical Research, 29(9), 2520–2537."),
   HTML(paste0(tags$a(href="https://journals.sagepub.com/doi/full/10.1177/0962280219889080", "https://journals.sagepub.com/doi/full/10.1177/0962280219889080"))), 
   br(), br(),
   print("Cai S., Zhou J., and Pan J. (2021). Estimating the sample mean and standard deviation from order statistics and sample size in meta-analysis. Statistical Methods in Medical Research, 30(12), 2701-2719."),
   HTML(paste0(tags$a(href="https://journals.sagepub.com/doi/full/10.1177/09622802211047348", "https://journals.sagepub.com/doi/full/10.1177/09622802211047348"))), 
   br(), br(),
-  print("McGrath S., Katzenschlager S., Zimmer A.J., Seitel A., Steele R., and Benedetti A. (2022). Standard error estimation in meta-analysis of studies reporting medians. In preparation"), 
+  print("McGrath S., Katzenschlager S., Zimmer A.J., Seitel A., Steele R., and Benedetti A. (2022). Standard error estimation in meta-analysis of studies reporting medians. arXiv e-prints."), 
+  HTML(paste0(tags$a(href="https://arxiv.org/abs/2206.14386", "https://arxiv.org/abs/2206.14386"))), 
 )
 
 server <- function(input, output) {
